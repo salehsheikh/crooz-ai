@@ -1,5 +1,6 @@
 import { Icon } from '@iconify/react'
 import Image from 'next/image'
+import iconZap from '../../../public/icons/zap-fast.svg';
 import React from 'react'
 
 const Navbar = () => {
@@ -8,7 +9,7 @@ const Navbar = () => {
         <div className='rounded-xl border border-[#E9EAEB] p-3 flex flex-1 items-center justify-between   gap-3'>
             <div className='flex gap-3 items-center'>
 <div className='size-10 p-2.5 rounded-lg border border-[#D5D7DA] flex items-center justify-center'>
-    <Image src='/icons/zap-fast.svg' alt='img' width={20} height={20} />
+    <Image src={iconZap} alt='img' width={20} height={20} />
 
 </div>
 <div>
