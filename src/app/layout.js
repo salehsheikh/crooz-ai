@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 const manrope = Manrope({
-  variable: "--font-manrope", 
+  variable: "--font-manrope",
   subsets: ["latin"],
 });
 
@@ -30,16 +30,17 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable}  ${manrope.variable} antialiased`}
       >
-         <div className="min-h-screen">
-      <div className="lg:flex hidden">
-        <Sidebar  />
-      </div>
-      <div className="py-[17px]  flex flex-col overflow-auto h-full max-h-screen px-[20px] md:px-[32px] ml-auto max-w-full w-full lg:w-[calc(100vw-260px)]">
-        <Navbar />
-        <main className="overflow-y-auto h-full px-6">{children}</main>
-      </div>
-    </div>
+        <div className="min-h-screen">
+          <div className="lg:flex hidden">
+            <Sidebar />
+          </div>
+          <div className="py-[17px]  flex flex-col overflow-auto h-full max-h-screen px-[20px] md:px-[32px] ml-auto max-w-full w-full lg:w-[calc(100vw-260px)]">
+            <Navbar />
+            <main className="overflow-y-auto h-full px-6">{children}</main>
+          </div>
+        </div>
       </body>
     </html>
   );
+
 }

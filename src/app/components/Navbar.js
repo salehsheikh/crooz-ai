@@ -1,7 +1,7 @@
 import { Icon } from '@iconify/react'
 import Image from 'next/image'
 import React from 'react'
-// navbar
+
 const Navbar = () => {
   return (
     <nav className='flex ml-6 '>
