@@ -1,10 +1,12 @@
 "use client";
 import { Icon } from "@iconify/react";
-import React from "react";
+import React, { useState } from "react";
 
 const UsageCard = () => {
+  const [isVisible, setIsVisible]=useState(true);
+  if(!isVisible) return null;
   return (
-    <div className="bg-[#F9F0FF] p-2 rounded-xl  w-[224px] mt-24">
+    <div className="bg-[#F9F0FF] p-2 rounded-xl  w-[224px] ">
       <div className="flex justify-between items-start mb-4">
         {/* Progress circle container */}
         <div className="relative w-14.5 h-14.5">
@@ -35,7 +37,8 @@ const UsageCard = () => {
         </div>
         
         {/* Close button */}
-        <button className="text-purple-500 cursor-pointer ">
+        <button className="text-purple-500 cursor-pointer "
+        onClick={()=> setIsVisible(false)}>
           <Icon icon="material-symbols-light:close-rounded" width="20" height="20" />
         </button>
       </div>

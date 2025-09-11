@@ -6,17 +6,18 @@
    --font-manrope: "Manrope", sans-serif; 
 }
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 6px;
+  height: 3px;
 }
  
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 7px #dedddd;
-  border-radius: 10px;
+  box-shadow: inset 0 0 7px #ffff;
+  border-radius: 6px;
 }
  
 ::-webkit-scrollbar-thumb {
   background: var(--2-color-grad, linear-gradient(133deg, #9CE7DC 2.91%, #018E81 100%));
-  border-radius: 10px;
+  border-radius: 6px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: var(--2-color-grad, linear-gradient(133deg, #9CE7DC 2.91%, #018E81 100%));
@@ -26,10 +27,8 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --breakpoint-xs: 430px;
 }
-
-
-
 
 body {
   background: var(--background);

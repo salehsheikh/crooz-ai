@@ -36,7 +36,7 @@ export default function Home() {
           <div
             key={index}
             onClick={() => setActive(index)}
-            className={`rounded-lg py-2.5 px-3.5 flex w-fit items-center gap-1.5 cursor-pointer  ${
+            className={`rounded-lg py-2.5 px-3.5 flex xs:w-fit w-full items-center justify-center gap-1.5 cursor-pointer  ${
               isActive
                 ? "bg-gradient-to-r from-[#006E62] via-[#45A99D] to-[#9CE7DC] shadow-[0_4px_16px_0_rgba(0,72,62,0.15)]"
                 : "border border-[#45A99D] bg-white"

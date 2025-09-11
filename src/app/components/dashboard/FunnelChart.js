@@ -63,6 +63,22 @@ const FunnelChart = () => {
       itemMargin: {
         vertical: 6,
       },
+      responsive: [
+    {
+      breakpoint: 640, // < sm
+      options: {
+        legend: {
+          position: "bottom",
+          horizontalAlign: "center",
+          verticalAlign: "bottom",
+          itemMargin: {
+            horizontal: 10,
+            vertical: 0,
+          },
+        },
+      },
+    },
+  ],
       markers: {
         shape: "circle", // <-- make markers round
         size:4
@@ -71,7 +87,25 @@ const FunnelChart = () => {
         const value = series[0].data[opts.seriesIndex];
         return `${seriesName} - $${value}`;
       },
+      
     },
+     responsive: [
+    {
+      breakpoint: 640, // < sm
+      options: {
+        legend: {
+          position: "bottom",
+          horizontalAlign: "center",
+          verticalAlign: "bottom",
+          itemMargin: {
+            horizontal: 10,
+            vertical: 0,
+          },
+        },
+      },
+    },
+  ],
+    
     grid: {
       show: false,
     },

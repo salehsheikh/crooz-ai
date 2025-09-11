@@ -100,8 +100,8 @@ const ActionItems = () => {
       </p>
       <a href='#' className='text-[#018E81]'>View all</a>
     </div>
-      
-       <div className='pt-3 rounded-xl border-t border-[#E9EAEB] bg-white'>
+      <div className="w-full overflow-x-auto">
+       <div className='pt-3 rounded-xl border-t border-[#E9EAEB] bg-white min-w-[500px]'>
       {/* Table Header */}
       <div className='border-b border-[#E9EAEB] pb-3 px-5'>
         <ul className='flex justify-between text-xs font-semibold text-[#717680]'>
@@ -174,6 +174,7 @@ const ActionItems = () => {
             </div>
           ))}
         </div>
+    </div>
     </div>
         </div>
   )

@@ -31,12 +31,12 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable}  ${manrope.variable} antialiased`}
       >
          <div className="min-h-screen">
-      <div className="lg:flex hidden">
+      <div className="flex ">
         <Sidebar  />
       </div>
-      <div className="py-[17px]  flex flex-col overflow-auto h-full max-h-screen px-[20px] md:px-[32px] ml-auto max-w-full w-full lg:w-[calc(100vw-260px)]">
+      <div className="md:py-[17px]  flex flex-col overflow-auto h-full max-h-screen px-[20px] md:px-[32px] ml-auto max-w-full w-full lg:w-[calc(100vw-260px)]">
         <Navbar />
-        <main className="overflow-y-auto h-full px-6">{children}</main>
+        <main className="overflow-y-auto h-full md:px-6 px-2">{children}</main>
       </div>
     </div>
       </body>

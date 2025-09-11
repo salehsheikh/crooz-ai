@@ -175,7 +175,7 @@ const ProgressCards = () => {
           <div className="bg-[#F5F5F5] size-10 p-2.5 rounded-full">
 <Icon icon="lucide:users" width="24" height="24" className='text-[#414651]'/>
           </div>
-          <p className='text-[#181D27] text-[32px] leading-11 font-semibold'>2,420</p>
+          <p className='text-[#181D27] sm:text-[32px] text-lg leading-11 font-semibold'>2,420</p>
          
         </div>
          <p className='text-[#181D27]  leading-6 font-semibold'>Metric 01</p>
@@ -189,7 +189,7 @@ const ProgressCards = () => {
           <div className="bg-[#F5F5F5] size-10 p-2.5 rounded-full">
 <Icon icon="lucide:users" width="24" height="24" className='text-[#414651]'/>
           </div>
-          <p className='text-[#181D27] text-[32px] leading-11 font-semibold'>1,210</p>
+          <p className='text-[#181D27] sm:text-[32px] text-lg  leading-11 font-semibold'>1,210</p>
          
         </div>
          <p className='text-[#181D27]  leading-6 font-semibold'>Metric 02</p>
@@ -202,7 +202,7 @@ const ProgressCards = () => {
           <div className="bg-[#F5F5F5] size-10 p-2.5 rounded-full">
 <Icon icon="lucide:users" width="24" height="24" className='text-[#414651]'/>
           </div>
-          <p className='text-[#181D27] text-[32px] leading-11 font-semibold'>316</p>
+          <p className='text-[#181D27] sm:text-[32px] text-lg leading-11 font-semibold'>316</p>
          
         </div>
          <p className='text-[#181D27]  leading-6 font-semibold'>Metric 03</p>

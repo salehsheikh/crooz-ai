@@ -5,8 +5,8 @@ import React from 'react'
 const Navbar = () => {
   return (
     <nav className='flex ml-6 '>
-        <div className='rounded-xl border border-[#E9EAEB] p-3 flex flex-1 items-center justify-between   gap-3'>
-            <div className='flex gap-3 items-center'>
+        <div className='rounded-xl md:border border-[#E9EAEB] p-3 flex flex-1 items-center justify-between   gap-3'>
+            <div className='md:flex hidden gap-3 items-center '>
 <div className='size-10 p-2.5 rounded-lg border border-[#D5D7DA] flex items-center justify-center'>
     <Image src='/icons/zap-fast.svg' alt='img' width={20} height={20} />
 
