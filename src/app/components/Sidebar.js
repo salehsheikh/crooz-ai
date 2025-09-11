@@ -47,12 +47,16 @@ const Sidebar = () => {
     { label: "Settings", icon: "weui:setting-outlined", href: "/settings" },
   ];
 
-  const getItemClasses = (href, isBadge = false) =>
-    `flex items-center gap-2.5 pl-3 text-base font-semibold leading-6 cursor-pointer rounded-[6px] ${
-      pathname === href
-        ? "py-2 px-3 border border-[#FFCA83] !bg-gradient-to-r from-[#FFE4A2] to-[#FFCCBC] text-[#622400]"
-        : "text-[#414651]"
-    } ${isBadge ? "justify-between" : ""}`;
+  const getItemClasses = (href, isBadge = false) => {
+    const isActive = pathname === href;
+    const baseClasses = `flex items-center gap-2.5 pl-3 text-base font-semibold leading-6 cursor-pointer rounded-[6px] ${isBadge ? "justify-between" : ""}`;
+    
+    if (isActive) {
+      return `${baseClasses} py-2 px-3 border border-[#FFCA83] bg-gradient-to-r from-[#FFE4A2] to-[#FFCCBC] text-[#622400]`;
+    }
+    
+    return `${baseClasses} text-[#414651]`;
+  };
 
   const getIconClasses = (href) =>
     pathname === href ? "text-[#C9861E]" : "text-[#A4A7AE]";
@@ -70,7 +74,7 @@ const Sidebar = () => {
       {isMobile && (
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="fixed top-1 left-2 z-50 p-2 rounded-md text-[#717680]  lg:hidden"
+          className="fixed top-1 left-2 z-50 p-2 rounded-md text-[#717680] lg:hidden"
         >
            {isOpen ? (
             <Icon icon="material-symbols:close" width="24" height="24" className="text-[#717680]" />
@@ -83,7 +87,7 @@ const Sidebar = () => {
       {/* Overlay for mobile when sidebar is open */}
       {isMobile && isOpen && (
         <div 
-          className="fixed inset-0  bg-opacity-50 z-40 lg:hidden"
+          className="fixed inset-0   z-40 lg:hidden"
           onClick={() => setIsOpen(false)}
         />
       )}
@@ -151,7 +155,7 @@ const Sidebar = () => {
           <UsageCard />
         </div>
 
-        <ul className="w-full space-y-5  ">
+        <ul className="w-full space-y-5">
           {bottomItems.map((item) => (
             <li key={item.href}>
               <Link 
