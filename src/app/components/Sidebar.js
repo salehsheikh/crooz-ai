@@ -11,19 +11,17 @@ const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
-  // Check screen size on mount and resize
+
   useEffect(() => {
     const checkScreenSize = () => {
-      setIsMobile(window.innerWidth < 1024); // lg breakpoint is 1024px in Tailwind
+      setIsMobile(window.innerWidth < 1024); 
     };
     
-    // Initial check
+
     checkScreenSize();
-    
-    // Add event listener
+
     window.addEventListener('resize', checkScreenSize);
-    
-    // Clean up
+
     return () => window.removeEventListener('resize', checkScreenSize);
   }, []);
 
