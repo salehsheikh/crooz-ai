@@ -50,7 +50,7 @@ const Sidebar = () => {
   const getItemClasses = (href, isBadge = false) =>
     `flex items-center gap-2.5 pl-3 text-base font-semibold leading-6 cursor-pointer rounded-[6px] ${
       pathname === href
-        ? "py-2 px-3 border border-[#FFCA83] bg-gradient-to-r from-[#FFE4A2] to-[#FFCCBC] text-[#622400]"
+        ? "py-2 px-3 border border-[#FFCA83] !bg-gradient-to-r from-[#FFE4A2] to-[#FFCCBC] text-[#622400]"
         : "text-[#414651]"
     } ${isBadge ? "justify-between" : ""}`;
 
@@ -72,7 +72,11 @@ const Sidebar = () => {
           onClick={() => setIsOpen(!isOpen)}
           className="fixed top-1 left-2 z-50 p-2 rounded-md text-[#717680]  lg:hidden"
         >
-          <Icon icon="ci:hamburger-md" width="24" height="24" />
+           {isOpen ? (
+            <Icon icon="material-symbols:close" width="24" height="24" className="text-[#717680]" />
+          ) : (
+            <Icon icon="ci:hamburger-md" width="24" height="24" className="text-[#717680]" />
+          )}
         </button>
       )}
       
