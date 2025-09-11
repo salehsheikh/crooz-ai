@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 const manrope = Manrope({
-  variable: "--font-manrope", 
+  variable: "--font-manrope",
   subsets: ["latin"],
 });
 
@@ -42,4 +42,5 @@ export default function RootLayout({ children }) {
       </body>
     </html>
   );
+
 }
